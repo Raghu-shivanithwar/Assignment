@@ -1,0 +1,159 @@
+/* General page styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.inventory-page {
+  padding: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+  background: #007AFF;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 14px;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  display: inline;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar .nav-links li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Header styling */
+.header {
+  margin: 20px 0;
+}
+
+.header input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.item-details,
+.supplier-details {
+    background: #EBEEFD;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Enable wrapping of items */
+}
+
+.item-details input,
+.supplier-details input,
+.supplier-details select {
+    width: 48%;
+    /* Make the input fields take up half the width to fit two in a row */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    /* On small screens, make the input fields full-width */
+    .item-details input,
+    .supplier-details input,
+    .supplier-details select {
+        width: 100%;
+    }
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th, td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
